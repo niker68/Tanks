@@ -54,26 +54,6 @@ class Canvas extends JComponent {
         }
 
         g2d.setColor(Color.black);
-        /*g2d.drawLine(0,10,300,10);
-        g2d.drawLine(0,20,300,20);
-        g2d.drawLine(0,30,300,30);
-        g2d.drawLine(0,40,300,40);
-        g2d.drawLine(0,50,300,50);
-        g2d.drawLine(0,60,300,60);
-        g2d.drawLine(0,70,300,70);
-        g2d.drawLine(0,80,300,80);
-        g2d.drawLine(0,90,300,90);
-        g2d.drawLine(0,100,300,100);
-        g2d.drawLine(10,0,10,300);
-        g2d.drawLine(20,0,20,300);
-        g2d.drawLine(30,0,30,300);
-        g2d.drawLine(40,0,40,300);
-        g2d.drawLine(50,0,50,300);
-        g2d.drawLine(60,0,60,300);
-        g2d.drawLine(70,0,70,300);
-        g2d.drawLine(80,0,80,300);
-        g2d.drawLine(90,0,90,300);
-        g2d.drawLine(100,0,100,300);*/
 
 
         /* 	Вызывает обновление себя после завершения рисования	*/

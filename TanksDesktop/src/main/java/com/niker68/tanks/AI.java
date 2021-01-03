@@ -5,6 +5,9 @@ public class AI implements Runnable{
     public AI(Tank tank){
         this.tank = tank;
     }
+    /*
+    движение вверх, если вверх нельзя(граница поля), то вниз. Далее по аналогии движение вниз, влево и вправо.
+     */
     public void MoveUp() throws InterruptedException {
         for (int i=0;i<(int)(Math.random()*3+3);i++){
             if (tank.MoveUp()){
@@ -40,8 +43,14 @@ public class AI implements Runnable{
             Thread.sleep(Game.speedOfTanks);
         }
     }
+    /*
+
+     */
     @Override
     public void run() {
+        /*
+        пока танк жив, он двигается в случайную сторону.
+         */
         while(!Thread.currentThread().isInterrupted()){
             while(tank.isAlive()){
 

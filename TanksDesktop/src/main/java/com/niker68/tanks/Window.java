@@ -15,8 +15,6 @@ public class Window extends JFrame implements Runnable{
         }
         @Override
         public void run() {
-
-            /* Задание заголовка окна*/
             while(!Thread.currentThread().isInterrupted()) {
                 //System.out.println("отрисовал");
                 try {
@@ -26,7 +24,6 @@ public class Window extends JFrame implements Runnable{
                     e.printStackTrace();
                 }
                 w.repaint();
-
             }
         }
 

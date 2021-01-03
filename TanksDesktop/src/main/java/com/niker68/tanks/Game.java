@@ -33,7 +33,7 @@ public class Game{
 
         w.setLayout(new BorderLayout(1, 1));
         w.addKeyListener(new KeyBoard());
-
+        //стартовая расстановка танков, 4 вражеских по углам и подконтрольный игроку в центре.
         tank0 = new Tank(12,12,false);
         tank1 = new Tank(0,0,true);
         tank2 = new Tank(0,24,true);
@@ -43,10 +43,12 @@ public class Game{
         listOfTanks.add(tank2);
         listOfTanks.add(tank3);
         listOfTanks.add(tank4);
+        //вражеские танки отданы под контроль искусственному интеллекту, отвечающему за движение.
         AI ai1 =new AI(tank1);
         AI ai2 =new AI(tank2);
         AI ai3 =new AI(tank3);
         AI ai4 =new AI(tank4);
+        //вражеские танки отданы под контроль искусственному интеллекту, отвечающему за стрельбу.
         Thread AI1ShootingThread = new Thread(new AIShooting(tank1));
         AI1ShootingThread.start();
         Thread AI2ShootingThread = new Thread(new AIShooting(tank2));
@@ -69,7 +71,7 @@ public class Game{
         respawnThread = new Thread(new TanksRespawn());
         respawnThread.start();
     }
-
+    //обновление по кнопке при уничтожении подконтрольного танка. Появление его на начальной точке.
     public static void refresh(){
         if (!tank0.isAlive()) {
             System.out.println("refresh");

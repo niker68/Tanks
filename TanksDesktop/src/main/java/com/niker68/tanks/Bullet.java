@@ -22,10 +22,6 @@ public class Bullet implements Runnable{
         this.coordinatebulletY = coordinatebulletY;
     }
 
-
-
-
-
     public int getCoordinateX() {
         return coordinatebulletX;
     }
@@ -33,15 +29,17 @@ public class Bullet implements Runnable{
     public int getCoordinateY() {
         return coordinatebulletY;
     }
-
+    //установка направления выстрела
     public void setDirection(EnumOfOrientation direction) {
         this.direction = direction;
     }
-
+    //при попадании снаряда, происходит его удаление из списка отрисовываемых снарядов.
     public void  destroyOfBullet(){
         this.isAlive = false;
         Game.listOfBullets.remove(this);
     }
+    //проверка попадания по подконтрольному танку, вражеских снарядов.
+    //если есть попадание, то увеличивается счетчик смертей и уничтожается танк.
     public boolean checkOfHitMe(){
         if (((Math.abs(coordinatebulletX-Game.tank0.getCoordinateX()))<=1)&&((Math.abs(coordinatebulletY-Game.tank0.getCoordinateY()))<=1)&&(bulletOfEnemy)){
             Game.tank0.TankDestroyed();
@@ -53,6 +51,8 @@ public class Bullet implements Runnable{
             return false;
         }
     }
+    //проверка попадания по вражеским танкам.
+    //если есть попадание, то уничтожается вражеский танк и увеличивается счетчик фрагов.
     public void checkOfHitEnemyes(){
         for (Tank tank:Game.listOfTanks){
             if (((Math.abs(coordinatebulletX-tank.getCoordinateX()))<=1)&&((Math.abs(coordinatebulletY-tank.getCoordinateY()))<=1)&&(!bulletOfEnemy)){
@@ -66,7 +66,9 @@ public class Bullet implements Runnable{
 
     }
 
-
+    /*
+    отрисовка движения снарядов и уничтожение их после вылета за пределы поля.
+     */
     @Override
     public void run() {
 

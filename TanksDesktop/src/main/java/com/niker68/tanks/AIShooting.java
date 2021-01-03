@@ -5,6 +5,9 @@ private Tank tank;
 public AIShooting(Tank tank){
     this.tank = tank;
 }
+/*
+пока танк жив, он стреляет с случайной задержкой между выстрелами.
+ */
     @Override
     public void run() {
     while(!Thread.currentThread().isInterrupted()){

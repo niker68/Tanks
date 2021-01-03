@@ -90,7 +90,7 @@ public class Tank implements TankInterface {
         }else{
         return false;}
     }
-
+    //Выстрел танка. Создает снаряд. Добавляет его в список отрисовываемых снарядов. Устанавливает ему направление в зависимости от направления танка в момент выстрела.
     @Override
     public void shoot() {
         //System.out.println("Танк выстрелил");

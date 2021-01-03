@@ -1,5 +1,5 @@
 package com.niker68.tanks;
-
+//механизм воскрешения вражеских танков. Если танк был уничтожен, то воскрешает его на исходной точке в углу.
 public class TanksRespawn implements Runnable {
     @Override
     public void run() {
