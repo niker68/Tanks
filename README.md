@@ -1,6 +1,7 @@
 
 # Tanks
 
+<img src="https://github.com/niker68/Tanks/blob/master/media/screen0.png" />
 Десктопная игра танчики.
 
 ## Запуск приложения
