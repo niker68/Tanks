@@ -2,7 +2,9 @@
   <artifact type="jar" name="TanksOnline:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TanksOnline_jar</output-path>
     <root id="archive" name="TanksOnline.jar">
-      <element id="module-output" name="TanksDesktop" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>
